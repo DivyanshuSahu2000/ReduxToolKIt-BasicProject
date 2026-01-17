@@ -1,5 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
-import { decrement, increaseByNum, increment } from "./redux/slices/countSlice";
+import {
+  decrement,
+  increaseByNum,
+  increment,
+} from "./redux/slices/counterSlice";
 import { useState } from "react";
 
 function App() {

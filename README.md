@@ -1,16 +1,28 @@
-# React + Vite
+# Redux Toll Kit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 1- Install
 
-Currently, two official plugins are available:
+- npm install @reduxjs/toolkit react-redux
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 2- Create Store
 
-## React Compiler
+- creates a file store.js under redux folder
+- import configureReducer make store then add reducer
+- wrap app components with Provide, and provide store in provider at main.js file
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 3- Create slices
 
-## Expanding the ESLint configuration
+- create feature slices like counterSlice or cartSlice ...
+- in that slice file import "createSlice({})"
+- in that slice object add name, initial state, reducers
+- in reducers make functions
+- export every fuction, reducer
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 4- Add Sllice reducers to store
+
+- in store inside reducer add this slice reducer function
+
+## 5- UseSelector & useDispatch
+
+- now catch data using UseSelector()
+- send actions using useDispatch to update data
